@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'org.adventistasbotujuru.comunicacaotv'
-    compileSdk 35
+    compileSdk 37
 
     defaultConfig {
         applicationId 'org.adventistasbotujuru.comunicacaotv'
