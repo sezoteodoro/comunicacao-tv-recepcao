@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Comunicação TV Helper",
+  "version": "2.0.0",
+  "description": "Ajustes de navegação para a Recepção na Android TV.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "comunicacao-tv-helper@adventistasbotujuru.org"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://comunicacao.adventistasbotujuru.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

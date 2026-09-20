@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.adventistasbotujuru.comunicacaotv'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'org.adventistasbotujuru.comunicacaotv'
+        minSdk 23
+        targetSdk 35
+        versionCode 2
+        versionName '2.0-gecko'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packaging {
+        resources {
+            excludes += ['/META-INF/{AL2.0,LGPL2.1}']
+        }
+    }
+}
+
+dependencies {
+    // GeckoView Stable - motor do Firefox incorporado ao APK.
+    // Versão estável publicada pela Mozilla em setembro/2026.
+    implementation 'org.mozilla.geckoview:geckoview-omni:156.0.20260909172920'
+}
